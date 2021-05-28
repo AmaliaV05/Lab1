@@ -1,0 +1,32 @@
+<h1 id="tableLabel">Patients</h1>
+
+<p>This component lists patients.</p>
+
+<p *ngIf="!patients"><em>Loading...</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="patients">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>SSN</th>
+      <th>Age</th>
+      <th>Gender</th>
+      <th>Weight</th>
+      <th>History</th>
+      <th>Doctor</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let patient of patients">
+      <td>{{ patient.id }}</td>
+      <td>{{ patient.name }}</td>
+      <td>{{ patient.ssn }}</td>
+      <td>{{ patient.age }}</td>
+      <td>{{ patient.gender }}</td>
+      <td>{{ patient.weight }}</td>
+      <td>{{ patient.history }}</td>
+      <td>{{ patient.doctor }}</td>
+    </tr>
+  </tbody>
+</table>
